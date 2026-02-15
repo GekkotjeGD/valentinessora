@@ -130,7 +130,7 @@ const PIN_LENGTH   = 2;
     if (btn) { btn.classList.add("pressed"); setTimeout(() => btn.classList.remove("pressed"), 130); }
   });
 
-  const target = new Date("2026-02-15T22:00:00");
+  const target = new Date("2026-02-16T22:00:00");
 
   function updateCountdown() {
     const diff = target - new Date();
@@ -144,7 +144,7 @@ const PIN_LENGTH   = 2;
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-  const target2 = new Date("2026-02-16T22:00:00");
+  const target2 = new Date("2026-02-17T22:00:00");
 
   function updateCountdown2() {
     const diff = target2 - new Date();

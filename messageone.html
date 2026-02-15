@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are my everything, Sora ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./msgstyle1.css">
+</head>
+<body>
+    <div class="hearts-bg" id="heartsContainer"></div>
+
+    <div class="side-border left">
+        <span>♥</span><span>✦</span><span>♥</span><span>✦</span><span>♥</span>
+        <span>✦</span><span>♥</span><span>✦</span><span>♥</span><span>✦</span>
+    </div>
+
+    <div class="side-border right">
+        <span>♥</span><span>✦</span><span>♥</span><span>✦</span><span>♥</span>
+        <span>✦</span><span>♥</span><span>✦</span><span>♥</span><span>✦</span>
+    </div>
+
+    <div class="site-title">Dear Sora,</div>
+    <div class="message">We have been together for almost a month now (on the 20th) <br>
+        and I just want to say that I love you so much more than you can ever imagine. <br>
+        <br>
+        Ever since we met you have made my life so much better. <br> 
+        Every time I get a text from you it just makes my whole day, <br>
+        no matter how bad my day was going before. <br>
+        Every picture, voice message, and video (tt) you send, <br>
+        just makes me feel so loved and cared for. <br>
+        <br>
+        And I am so thankful to have you in my life. <br>
+        I know I can talk to you, <br>
+        be myself around you, <br>
+        make jokes with you, <br>
+        because you will always be there, not judging how I act. <br>
+        And that's why I love you so much. <br>
+        <br>
+        <div class="dividetop"><span>♥</span></div>
+        <br>
+        <i>I know we have only been together for a short time, <br>
+        So I hope in our relationship we continue to climb, <br>
+        Until our bond reaches such heights, <br>
+        That it wont break, even in the darkest nights. <br>
+        <br>
+        I want you to know, <br>
+        The most important in the world is you, <br>
+        To me you're as important as to skiing there is snow, <br>
+        Or as to saturation there is hue. <br>
+        <br>
+        I love you so so much, <br>
+        It will be worth all the wait, <br>
+        To at some day feel your touch, <br>
+        Us in real life together, it will be great. <br>
+        <br>
+        I'm willing to do anything for us to stay, <br>
+        And I'm glad we are a perfect match, <br>
+        So let's keep it that way, <br>
+        And promise to never close the latch. <br>
+        <br>
+        All though the distance between us stretches far, <br>
+        You always light up my world, like the brightest star, <br>
+        You're the flower to my empty vase, <br>
+        So until the day I get to say, <br>
+        "I love you", to your face, <br>
+        <strong>Dear Sora, I'll always love you anyway.</strong> <br>
+        <br>
+        </i>
+        <div class="dividebottom"><span>♥</span></div>
+        <br>
+        You are the most amazing person that I have ever met, and I am so grateful to have you in my life. I know sometimes we have our ups <br>
+        and downs, but I want you to know that no matter what happens, <strong><i><br><div class="love-msg">I will always love you.</div></i></strong> <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+<script>
+    const heartsContainer = document.getElementById("heartsContainer");
+    const heartChars = ["♥", "♡", "❤", "💕", "✿", "❀", "❤️"];
+    function spawnHeart() {
+        const el = document.createElement("div");
+        el.className = "heart-particle";
+        el.textContent = heartChars[Math.floor(Math.random() * heartChars.length)];
+        el.style.left     = Math.random() * 100 + "vw";
+        el.style.fontSize = (10 + Math.random() * 14) + "px";
+        el.style.color    = `hsl(${340 + Math.random()*30}, ${60+Math.random()*20}%, ${60+Math.random()*15}%)`;
+        const dur = 8 + Math.random() * 10;
+        el.style.animationDuration  = dur + "s";
+        el.style.animationDelay     = Math.random() * dur + "s";
+        heartsContainer.appendChild(el);
+        setTimeout(() => el.remove(), (dur * 2) * 1000);
+    }
+    for (let i = 0; i < 18; i++) spawnHeart();
+    setInterval(spawnHeart, 1800);
+</script>
+</body>
+</html>

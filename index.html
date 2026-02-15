@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Valentines ♥</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+
+<div class="hearts-bg" id="heartsContainer"></div>
+
+
+<div id="lockScreen">
+  <div class="lock-card">
+    <div class="top-bar"></div>
+
+    <div class="lock-header">
+
+      <div class="lock-title">Enter Our Code</div>
+      <div class="lock-subtitle">I expect you to get this first try, Sora</div>
+    </div>
+
+    <div class="pin-display" id="pinDisplay"></div>
+    <div class="status-msg" id="statusMsg">I love you!</div>
+
+    <div class="numpad" id="numpad">
+      <button class="np-btn" data-val="1">1</button>
+      <button class="np-btn" data-val="2">2</button>
+      <button class="np-btn" data-val="3">3</button>
+      <button class="np-btn" data-val="4">4</button>
+      <button class="np-btn" data-val="5">5</button>
+      <button class="np-btn" data-val="6">6</button>
+      <button class="np-btn" data-val="7">7</button>
+      <button class="np-btn" data-val="8">8</button>
+      <button class="np-btn" data-val="9">9</button>
+      <button class="np-btn del" data-val="clear">clear</button>
+      <button class="np-btn" data-val="0">0</button>
+      <button class="np-btn del" data-val="back">⌫</button>
+    </div>
+
+    <div class="divider"><span>♥</span></div>
+  </div>
+</div>
+
+<div id="siteContent">
+
+    <div class="site-title">Hello, beautiful</div>
+  
+    <div class="img-card" style="top: 18%; left: 28%;">
+      <div class="img-style"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></div>
+      <div class="hover-msg">qm7hdlRhwlM</div>
+    </div>
+  
+    <div class="img-card" style="top: 16%; left: 46%;">
+      <div class="img-style"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></div>
+      <div class="hover-msg">rA_yP14iR2s</div>
+    </div>
+  
+    <div class="img-card" style="top: 18%; right: 28%;">
+      <div class="img-style"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></div>
+      <div class="hover-msg">IdKBSBN0pjc</div>
+    </div>
+  
+    <div class="img-card" style="top: 50%; left: 14%; transform: translateY(-50%);">
+      <a href="./messageone.html" class="img-style" target="_blank"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></a>
+    </div>
+  
+    <div class="img-card" style="top: 50%; right: 14%; transform: translateY(-50%);">
+      <a href="./messagetwo.html" class="img-style" target="_blank"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></a>
+    </div>
+  
+    <div class="img-card flip-msg" style="bottom: 18%; left: 28%;">
+      <div class="img-style"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></div>
+      <div class="hover-msg"><span id="countdown1"></span></div>
+    </div>
+  
+    <div class="img-card flip-msg" style="bottom: 16%; left: 46%;">
+      <div class="img-style"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></div>
+      <div class="hover-msg"><span id="countdown2"></span></div>
+    </div>
+  
+    <div class="img-card flip-msg" style="bottom: 18%; right: 28%;">
+      <div class="img-style"><img src="./bouquet.png" alt="lilies bouquet" width="110px" height="110px"></div>
+      <div class="hover-msg"><span id="countdown3"></span></div>
+    </div>
+  
+  </div>
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--bg: #fdf6f0;
+--surface: #fff8f5;
+--border: #f0d5cb;
+--rose: #c0445a;
+--rose-light: #e8849a;
+--rose-dim: rgba(192,68,90,0.10);
+--rose-glow: rgba(192,68,90,0.25);
+--blush: #f7c5cf;
+--gold: #c9a96e;
+--gold-dim: rgba(201,169,110,0.15);
+--text: #3a1f24;
+--muted: #b89fa4;
+--btn-bg: #fff2ef;
+--btn-hover: #ffe8e3;
+--success: #7a9e6e;
+}
+
+html, body {
+height: 100%;
+background: var(--bg);
+color: var(--text);
+font-family: 'EB Garamond', serif;
+}
+
+body::before {
+content: '';
+position: fixed;
+inset: 0;
+background:
+    radial-gradient(ellipse 70% 60% at 20% 10%, rgba(240,180,190,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 80% 90%, rgba(201,169,110,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 60% 40%, rgba(248,210,218,0.18) 0%, transparent 60%);
+pointer-events: none;
+z-index: 0;
+}
+
+
+.hearts-bg {
+position: fixed;
+inset: 0;
+pointer-events: none;
+z-index: 0;
+overflow: hidden;
+}
+
+.heart-particle {
+position: absolute;
+bottom: -40px;
+font-size: 14px;
+opacity: 0;
+animation: floatHeart linear infinite;
+user-select: none;
+}
+
+@keyframes floatHeart {
+0%   { transform: translateY(0) rotate(-10deg) scale(0.8); opacity: 0; }
+10%  { opacity: 0.35; }
+80%  { opacity: 0.2; }
+100% { transform: translateY(-110vh) rotate(15deg) scale(1.1); opacity: 0; }
+}
+
+.site-title {
+position: absolute;
+top: 5%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Cormorant Garamond', serif;
+font-size: 60px;
+font-weight: 599;
+font-style: italic;
+color: var(--rose);
+text-shadow: 0 4px 24px rgba(192,68,90,0.18);
+white-space: nowrap;
+z-index: 2;
+pointer-events: none;
+text-align: center;
+}
+
+.message {
+position: absolute;
+top: 12%;
+left: 50%;
+width: 500px;
+text-align: center;
+transform: translate(-50%);
+font-family: 'Cormorant Garamond', serif;
+font-size: 15px;
+}
+
+.love-msg {
+position: absolute;
+bottom: 0px;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Cormorant Garamond', serif;
+font-size: 40px;
+font-weight: 599;
+font-style: italic;
+color: var(--rose);
+text-shadow: 0 4px 24px rgba(192,68,90,0.18);
+white-space: nowrap;
+z-index: 2;
+pointer-events: none;
+text-align: center;
+}
+
+.dividetop,
+.dividebottom {
+display: flex;
+align-items: center;
+gap: 10px;
+opacity: 0.4;
+}
+
+.dividetop::before, .dividetop::after,
+.dividebottom::before, .dividebottom::after {
+content: '';
+flex: 1;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(--rose-light));
+}
+
+.dividetop::after, .dividebottom::after { background: linear-gradient(90deg, var(--rose-light), transparent); }
+.dividetop, .dividebottom span { font-size: 10px; color: var(--rose); 
+}
+
+.side-border {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.side-border.left  { left: 14px; }
+.side-border.right { right: 14px; }
+
+.side-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--rose-light) 12%,
+        var(--rose-light) 88%,
+        transparent
+    );
+    opacity: 0.45;
+}
+
+.side-border span {
+    font-size: 8px;
+    color: var(--rose);
+    opacity: 0.3;
+    user-select: none;
+    animation: sidePulse 4s ease-in-out infinite;
+}
+
+.side-border span:nth-child(2)  { animation-delay: 0.4s; }
+.side-border span:nth-child(3)  { animation-delay: 0.8s; }
+.side-border span:nth-child(4)  { animation-delay: 1.2s; }
+.side-border span:nth-child(5)  { animation-delay: 1.6s; }
+.side-border span:nth-child(6)  { animation-delay: 2.0s; }
+.side-border span:nth-child(7)  { animation-delay: 2.4s; }
+.side-border span:nth-child(8)  { animation-delay: 2.8s; }
+.side-border span:nth-child(9)  { animation-delay: 3.2s; }
+.side-border span:nth-child(10) { animation-delay: 3.6s; }
+
+@keyframes sidePulse {
+    0%, 100% { opacity: 0.25; transform: scale(1); }
+    50%       { opacity: 0.55; transform: scale(1.3); }
+}
